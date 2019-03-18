@@ -1,0 +1,11 @@
+div#chartDiv {
+    top: 50%;
+    left: 50%;
+    height:28em;
+    width:50em;
+    margin-top: -14em; /*Establecer a 1/2 negativo del valor height*/
+    margin-left: -25em; /*Establecer a 1/2 negativo del valor width*/
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    position:fixed;
+}
