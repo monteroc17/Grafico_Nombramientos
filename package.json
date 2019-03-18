@@ -1,0 +1,31 @@
+{
+  "name": "grafico_nombramientos",
+  "version": "1.0.0",
+  "description": "Grafico para representar plazas utilizadas para los funcionarios del tec",
+  "main": "javascript/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monteroc17/Grafico_Nombramientos.git"
+  },
+  "author": "Daniel Montero, Bryan Hernandez y Stward Pérez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monteroc17/Grafico_Nombramientos/issues"
+  },
+  "homepage": "https://github.com/monteroc17/Grafico_Nombramientos#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
