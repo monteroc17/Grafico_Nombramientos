@@ -1,0 +1,116 @@
+export default class Datos {
+    constructor() {
+        this.datos = [{ "rdia": "2019-01-01", "rporcentaje": "120", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-02", "rporcentaje": "84", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-03", "rporcentaje": "45", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-04", "rporcentaje": "89", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-05", "rporcentaje": "12", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-06", "rporcentaje": "44", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-07", "rporcentaje": "81", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-08", "rporcentaje": "50", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-09", "rporcentaje": "69", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-10", "rporcentaje": "101", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-11", "rporcentaje": "99", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-12", "rporcentaje": "40", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-13", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-14", "rporcentaje": "70", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-15", "rporcentaje": "69", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-16", "rporcentaje": "88", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-17", "rporcentaje": "10", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-18", "rporcentaje": "0", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-19", "rporcentaje": "45", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-20", "rporcentaje": "23", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-21", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-22", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-23", "rporcentaje": "99", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-24", "rporcentaje": "67", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-25", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-26", "rporcentaje": "125", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-27", "rporcentaje": "111", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-28", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-29", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-30", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-01-31", "rporcentaje": "76", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-01", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-02", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-03", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-04", "rporcentaje": "60", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-05", "rporcentaje": "43", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-06", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-07", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-08", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-09", "rporcentaje": "69", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-10", "rporcentaje": "20", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-11", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-12", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-13", "rporcentaje": "8", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-14", "rporcentaje": "9", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-15", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-16", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-17", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-18", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-19", "rporcentaje": "199", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-20", "rporcentaje": "67", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-21", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-22", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-23", "rporcentaje": "90", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-24", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-25", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-26", "rporcentaje": "45", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-27", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-02-28", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-01", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-02", "rporcentaje": "160", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-03", "rporcentaje": "98", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-04", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-05", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-06", "rporcentaje": "69", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-07", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-08", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-09", "rporcentaje": "23", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-10", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-11", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-12", "rporcentaje": "8", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-13", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-14", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-15", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-16", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-17", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-18", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-19", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-20", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-21", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-22", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-23", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-24", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-25", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-26", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-27", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-28", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-29", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-30", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }, { "rdia": "2019-03-31", "rporcentaje": "80", "ridnombramientos": "{41433,41434}" }];
+    }
+
+    obtenerDatos() {
+        return this.datos
+    }
+
+    filtrarPorDia(inicio, fin) {
+        let diaInicio = parseInt(inicio.split('-')[2]);
+        let mesInicio = parseInt(inicio.split('-')[1]);
+        let añoInicio = parseInt(inicio.split('-')[0]);
+        let diaFin = parseInt(fin.split('-')[2]);
+        let mesFin = parseInt(fin.split('-')[1]);
+        let añoFin = parseInt(fin.split('-')[0]);
+        return this.filtrar(diaInicio, diaFin, mesInicio, mesFin, añoInicio, añoFin);
+    }
+    filtrarPorMes(inicio, fin) {
+        let listaPorRango = this.filtrarPorDia(inicio, fin);
+        let meses = [];
+        listaPorRango.forEach(e => {
+            meses.push(e.rdia.split('-')[1]);
+        });
+        meses = meses.sort().filter((item, pos, ary) => {
+            return !pos || item != ary[pos - 1];
+        });
+        let res = [];
+        meses.forEach(mes => {
+            res.push({
+                [mes]: this.obtenerValores(listaPorRango.filter(elemento => {
+                    return elemento.rdia.split('-')[1] === mes; // filtra la lista por mes
+                }))
+            });
+        });
+        return res;
+    }
+    filtrarPorAño(inicio, fin) {
+        let listaPorRango = this.filtrarPorDia(inicio, fin);
+        let año = [];
+        listaPorRango.forEach(e => {
+            año.push(e.rdia.split('-')[0]);
+        });
+        año = año.sort().filter((item, pos, ary) => {
+            return !pos || item != ary[pos - 1];
+        });
+        let res = [];
+        año.forEach(año => {
+            res.push({
+                [año]: this.obtenerValores(listaPorRango.filter(elemento => {
+                    return elemento.rdia.split('-')[0] === año; // filtra la lista por mes
+                }))
+            });
+        });
+        return res;
+    }
+
+    // Obtiene el porcentaje minimo y maximo de una lista dada
+    obtenerValores(lista) {        
+        return [this.obtenerMenor(lista), this.obtenerMayor(lista)];
+    }
+
+    obtenerMenor(lista){
+        let elementoMin;
+        let min = 200;
+        lista.forEach(elemento => {
+            if (parseInt(elemento.rporcentaje) <= min) {
+                elementoMin = elemento;
+                min = elemento.rporcentaje;
+            }
+        });
+        return elementoMin;
+    }
+
+    obtenerMayor(lista){
+        let elementoMax;
+        let max = 0;
+        lista.forEach(elemento => {
+            if (parseInt(elemento.rporcentaje) >= max) {
+                elementoMax = elemento;
+                max = elemento.rporcentaje;
+            }
+        });
+        return elementoMax;
+    }
+
+    // funcion que filtra las fechas segun el rango especificado
+    filtrar(diaInicio, diaFin, mesInicio, mesFin, añoInicio, añoFin) {
+        return this.datos.filter(elemento => {
+            let dia = parseInt(elemento.rdia.split('-')[2]);
+            let mes = parseInt(elemento.rdia.split('-')[1]);
+            let año = parseInt(elemento.rdia.split('-')[0]);
+            return this.perteneceARango([año, mes, dia], [añoInicio, mesInicio, diaInicio], [añoFin, mesFin, diaFin]);
+        })
+    }
+
+    // indica si la fecha actual se encuentra entre inicio y fin
+    perteneceARango(actual, inicio, fin) {
+        let res = this.entre(actual[0], inicio[0], fin[0]) && this.entre(actual[1], inicio[1], fin[1]) && this.diaPerteneceARango(actual, inicio, fin);
+        return res;
+    }
+
+    entre(x, min, max) {
+        return x >= min && x <= max;
+    }
+    diaPerteneceARango(actual, inicio, fin) {
+        // si el mes a comparar es igual al MINIMO, el dia actual no puede ser MENOR al dia minimo
+        if (actual[1] === inicio[1]) {
+            return actual[2] >= inicio[2];
+        } else if (actual[1] === fin[1]) { // Si el mes a comparar es igual al MAXIMO, el dia actual no puede ser MAYOR al dia maximo
+            return actual[2] <= fin[2];
+        }
+        // En cualquier otro caso, cualquier dia es correcto
+        return true;
+    }
+}
