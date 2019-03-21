@@ -7,19 +7,9 @@ export default class Datos {
         return this.datos
     }
 
-    filtrarPorDia(inicio, fin) {
-        let diaInicio = parseInt(inicio.split('-')[2]);
-        let mesInicio = parseInt(inicio.split('-')[1]);
-        let añoInicio = parseInt(inicio.split('-')[0]);
-        let diaFin = parseInt(fin.split('-')[2]);
-        let mesFin = parseInt(fin.split('-')[1]);
-        let añoFin = parseInt(fin.split('-')[0]);
-        return this.filtrar(diaInicio, diaFin, mesInicio, mesFin, añoInicio, añoFin);
-    }
-    filtrarPorMes(inicio, fin) {
-        let listaPorRango = this.filtrarPorDia(inicio, fin);
+    filtrarPorMes() {
         let meses = [];
-        listaPorRango.forEach(e => {
+        this.datos.forEach(e => {
             meses.push(e.rdia.split('-')[1]);
         });
         meses = meses.sort().filter((item, pos, ary) => {
@@ -35,10 +25,9 @@ export default class Datos {
         });
         return res;
     }
-    filtrarPorAño(inicio, fin) {
-        let listaPorRango = this.filtrarPorDia(inicio, fin);
+    filtrarPorAño() {
         let año = [];
-        listaPorRango.forEach(e => {
+        this.data.forEach(e => {
             año.push(e.rdia.split('-')[0]);
         });
         año = año.sort().filter((item, pos, ary) => {
@@ -83,34 +72,5 @@ export default class Datos {
         });
         return elementoMax;
     }
-
-    // funcion que filtra las fechas segun el rango especificado
-    filtrar(diaInicio, diaFin, mesInicio, mesFin, añoInicio, añoFin) {
-        return this.datos.filter(elemento => {
-            let dia = parseInt(elemento.rdia.split('-')[2]);
-            let mes = parseInt(elemento.rdia.split('-')[1]);
-            let año = parseInt(elemento.rdia.split('-')[0]);
-            return this.perteneceARango([año, mes, dia], [añoInicio, mesInicio, diaInicio], [añoFin, mesFin, diaFin]);
-        })
-    }
-
-    // indica si la fecha actual se encuentra entre inicio y fin
-    perteneceARango(actual, inicio, fin) {
-        let res = this.entre(actual[0], inicio[0], fin[0]) && this.entre(actual[1], inicio[1], fin[1]) && this.diaPerteneceARango(actual, inicio, fin);
-        return res;
-    }
-
-    entre(x, min, max) {
-        return x >= min && x <= max;
-    }
-    diaPerteneceARango(actual, inicio, fin) {
-        // si el mes a comparar es igual al MINIMO, el dia actual no puede ser MENOR al dia minimo
-        if (actual[1] === inicio[1]) {
-            return actual[2] >= inicio[2];
-        } else if (actual[1] === fin[1]) { // Si el mes a comparar es igual al MAXIMO, el dia actual no puede ser MAYOR al dia maximo
-            return actual[2] <= fin[2];
-        }
-        // En cualquier otro caso, cualquier dia es correcto
-        return true;
-    }
+    
 }
