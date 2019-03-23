@@ -1,6 +1,13 @@
+.chartContext{
+    height:95vh;
+    width: 70vw;
+    position: relative;
+    margin: auto;
+}
+
 div#chartDiv{
-    height:28em;
-    width:50em;
+    height:70%;
+    width:inherit;
     position: relative;
     margin: 0 auto;
     border: 1px solid#ccc;
