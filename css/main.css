@@ -1,11 +1,50 @@
-div#chartDiv {
+div#chartDiv{
     top: 50%;
     left: 50%;
     height:28em;
     width:50em;
     margin-top: -14em; /*Establecer a 1/2 negativo del valor height*/
     margin-left: -25em; /*Establecer a 1/2 negativo del valor width*/
-    border: 1px solid #ccc;
+    border: 1px solid#ccc;
     background-color: #f3f3f3;
     position:fixed;
+    padding: 1px 4px 1px 4px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.tub{
+    width: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0px 4px 0px 0px;
+}
+
+.yellowFilling{
+    background-color: rgba(204, 204, 0, .8);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(204, 204, 0);
+    height: 45%;
+    width: inherit;
+}
+
+.redFilling{
+    background-color: rgba(245, 30, 30, .8);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(245, 30, 30);
+    height: 100%;
+    width: inherit;
+}
+
+.greenFilling{
+    background-color: green;
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+    height: 50%;
+    width: inherit;
 }
