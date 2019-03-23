@@ -1,14 +1,11 @@
 div#chartDiv{
-    top: 50%;
-    left: 50%;
     height:28em;
     width:50em;
-    margin-top: -14em; /*Establecer a 1/2 negativo del valor height*/
-    margin-left: -25em; /*Establecer a 1/2 negativo del valor width*/
+    position: relative;
+    margin: 0 auto;
     border: 1px solid#ccc;
     background-color: #f3f3f3;
-    position:fixed;
-    padding: 1px 4px 1px 4px;
+    padding: 0px 4px 1px 4px;
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
@@ -27,7 +24,7 @@ div#chartDiv{
     border-style: solid;
     border-width: 2px;
     border-color: rgb(204, 204, 0);
-    height: 45%;
+    height: 30%;
     width: inherit;
 }
 
