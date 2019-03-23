@@ -18,7 +18,7 @@ export default class Datos {
         let res = [];
         meses.forEach(mes => {
             res.push({
-                [mes]: this.obtenerValores(listaPorRango.filter(elemento => {
+                [mes]: this.obtenerValores(this.datos.filter(elemento => {
                     return elemento.rdia.split('-')[1] === mes; // filtra la lista por mes
                 }))
             });
@@ -27,16 +27,18 @@ export default class Datos {
     }
     filtrarPorAño() {
         let año = [];
-        this.data.forEach(e => {
+        this.datos.forEach(e => {
             año.push(e.rdia.split('-')[0]);
         });
-        año = año.sort().filter((item, pos, ary) => {
-            return !pos || item != ary[pos - 1];
-        });
+        if(año.length > 1){
+            año = año.sort().filter((item, pos, ary) => {
+                return !pos || item != ary[pos - 1];
+            });
+        }
         let res = [];
         año.forEach(año => {
             res.push({
-                [año]: this.obtenerValores(listaPorRango.filter(elemento => {
+                [año]: this.obtenerValores(this.datos.filter(elemento => {
                     return elemento.rdia.split('-')[0] === año; // filtra la lista por mes
                 }))
             });
@@ -71,6 +73,24 @@ export default class Datos {
             }
         });
         return elementoMax;
+    }
+
+    // actualiza los colores de las barras
+    verificarColor(lista){
+        console.log('aplicando colores');
+        let barras = document.getElementsByClassName('barra');
+        console.log(barras)
+        for(var i = 0; i < barras.length; i++) {
+            console.log('elemento',barras[i]);
+            if(lista[i].rporcentaje > '100'){
+                barras[i].className = barras[i].className + " roja";
+            } else if(lista[i].rporcentaje < '100') {
+                barras[i].className = barras[i].className + " amarilla";
+            } else {
+                barras[i].className = barras[i].className + " verde";
+            }
+            console.log('color',barras[i].style.backgroundColor)
+        }
     }
     
 }
