@@ -1,18 +1,31 @@
 .chartContext{
-    height:95vh;
+    height:90vh;
     width: 70vw;
     position: relative;
     margin: auto;
+    border: 1px solid#ccc;
+    background-color: #f3f3f3;
+    padding: 8px;
+    color: white;
+}
+
+.chartHeader{
+    width: 100%;
+    background-color: rgba(105,105,105,.8);
+    font-weight: bold;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 div#chartDiv{
-    height:70%;
-    width:inherit;
+    height:80%;
+    width:100%;
     position: relative;
-    margin: 0 auto;
+    margin: auto;
     border: 1px solid#ccc;
     background-color: #f3f3f3;
-    padding: 0px 4px 1px 4px;
+    padding: 0px 0px 1px 0px;
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
