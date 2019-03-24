@@ -30,7 +30,11 @@ div#chartDiv {
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox 64 */
 }
+
+div#chartDiv::-webkit-scrollbar { display: none }
 
 .tub {
     width: 25px;
