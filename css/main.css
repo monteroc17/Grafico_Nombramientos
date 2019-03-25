@@ -51,7 +51,7 @@ div#chartDiv::-webkit-scrollbar { display: none }
     border-color: rgb(204, 204, 0);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    height: 30%;
+    animation: filling 2s;
     width: inherit;
 }
 
@@ -62,7 +62,7 @@ div#chartDiv::-webkit-scrollbar { display: none }
     border-color: rgb(245, 30, 30);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    height: 100%;
+    animation: filling 2s;
     width: inherit;
 }
 
@@ -73,7 +73,7 @@ div#chartDiv::-webkit-scrollbar { display: none }
     border-color: rgb(0, 100, 0);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    height: 50%;
+    animation: filling 2s;
     width: inherit;
 }
 
@@ -87,4 +87,8 @@ div#chartDiv::-webkit-scrollbar { display: none }
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+@keyframes filling{
+    from {height: 100%}
 }
