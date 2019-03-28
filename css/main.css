@@ -34,6 +34,8 @@ div#chartDiv {
     background-color: #f3f3f3;
     padding: 1px;
     display: flex;
+    user-select: none;
+    cursor: pointer;
     overflow-x: auto;
     overflow-y: hidden;
     -ms-overflow-style: none;

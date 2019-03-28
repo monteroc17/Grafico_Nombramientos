@@ -11,6 +11,7 @@ export default class Datos {
      * filtra el JSON por mes
      */
     filtrarPorMes() {
+        this.limpiarGrafico();
         let meses = [];
         this.datos.forEach(e => {
             meses.push(e.rdia.split('-')[1]);
@@ -26,6 +27,7 @@ export default class Datos {
                 }))
             });
         });
+        console.log('por mes ', res)
         return res;
     }
 
@@ -33,6 +35,7 @@ export default class Datos {
      * filtra el JSON por año
      */
     filtrarPorAño() {
+        this.limpiarGrafico();
         let año = [];
         this.datos.forEach(e => {
             año.push(e.rdia.split('-')[0]);
@@ -50,6 +53,7 @@ export default class Datos {
                 }))
             });
         });
+        console.log('por anio ', res)
         return res;
     }
 
@@ -114,5 +118,12 @@ export default class Datos {
             container.appendChild(tempDiv);
         }
     }
-    
+
+    limpiarGrafico() {
+        var node = document.getElementById('chartDiv');
+        while (node.hasChildNodes()) {
+            node.removeChild(node.lastChild);
+        }
+    }
+
 }
