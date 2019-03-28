@@ -3,7 +3,7 @@ import Datos from "./datos";
 
 
 const datos = new Datos();
-
+datos.cargarGrafico(datos.obtenerDatos());
 
 console.log('data', datos.obtenerDatos());
 let inicio = '2019-02-11'; let fin = '2019-03-11';
