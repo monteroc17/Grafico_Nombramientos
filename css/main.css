@@ -1,11 +1,115 @@
-div#chartDiv {
-    top: 50%;
-    left: 50%;
-    height:28em;
-    width:50em;
-    margin-top: -14em; /*Establecer a 1/2 negativo del valor height*/
-    margin-left: -25em; /*Establecer a 1/2 negativo del valor width*/
-    border: 1px solid #ccc;
+.chartContext {
+    height: 100vh;
+    width: 70vw;
+    margin: auto;
+    border: 1px solid#ccc;
     background-color: #f3f3f3;
-    position:fixed;
+    padding: 1px 8px 8px 8px;
+    color: white;
+}
+
+.chartInfo {
+    width: 100%;
+    background-color: rgba(105, 105, 105, .8);
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    padding: 2px;
+    justify-content: space-between;
+}
+
+.chartContaniner{
+    width: 100%;
+    height: 80%;
+    padding: 1px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    position: relative;
+}
+
+div#chartDiv {
+    height: 100%;
+    width: 92%;
+    border: 1px solid#ccc;
+    background-color: #f3f3f3;
+    padding: 1px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox 64 */
+}
+
+div#chartDiv::-webkit-scrollbar { display: none }
+
+.tub {
+    width: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0px 6px 0px 0px;
+}
+
+.yellowFilling {
+    background-color: rgba(204, 204, 0, .8);
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(204, 204, 0);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    animation: filling 2s;
+    width: inherit;
+}
+
+.redFilling {
+    background-color: rgba(245, 30, 30, .8);
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(245, 30, 30);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    animation: filling 2s;
+    width: inherit;
+}
+
+.greenFilling {
+    background-color: rgba(0, 100, 0, .8);
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 100, 0);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    animation: filling 2s;
+    width: inherit;
+}
+
+.btn {
+    background-color: rgb(107, 37, 153);
+    border: 0px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.medida{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    right: 0px;
+    margin: 0;
+    width: 7%;
+    background-color: red;
+    border-bottom-width: 2px;
+    border-bottom-color: white;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+@keyframes filling{
+    from {height: 100%}
 }

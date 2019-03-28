@@ -6,15 +6,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nombramientos</title>
-    <script type="text/javascript" src="../bundle/graphLogic-bundle.js"></script>
 </head>
 
 <body>
-
-    <div id="chartDiv">
-
+    <div class="chartContext">
+        <div class="chartInfo">
+            <p id="codigoPlaza">Plaza:IFGGR4</p>
+            <div>
+                <button class="btn">Dias</button>
+                <button class="btn">Meses</button>
+                <button class="btn">Años</button>
+            </div>
+        </div>
+        <div class="chartContaniner">
+            <div id="chartDiv">
+                <!-- <div class="tub">
+                    <div class="yellowFilling" style="height:46%"></div>
+                </div>
+                <div class="tub">
+                    <div class="redFilling" style="height:100%"></div>
+                </div>
+                <div class="tub">
+                    <div class="redFilling" style="height:100%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:75%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:50%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:54%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:50%"></div>
+                </div>
+                <div class="tub">
+                    <div class="yellowFilling" style="height:40%"></div>
+                </div>
+                <div class="tub">
+                    <div class="yellowFilling" style="height:35%"></div>
+                </div>
+                <div class="tub">
+                    <div class="yellowFilling" style="height:47%"></div>
+                </div>
+                <div class="tub">
+                    <div class="yellowFilling" style="height:20%"></div>
+                </div>
+                <div class="tub">
+                    <div class="redFilling" style="height:100%"></div>
+                </div>
+                <div class="tub">
+                    <div class="redFilling" style="height:100%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:95%"></div>
+                </div>
+                <div class="tub">
+                    <div class="redFilling" style="height:100%"></div>
+                </div>
+                <div class="tub">
+                    <div class="redFilling" style="height:100%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:75%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:75%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:50%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:54%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:50%"></div>
+                </div>
+                <div class="tub">
+                    <div class="yellowFilling" style="height:40%"></div>
+                </div>
+                <div class="tub">
+                    <div class="yellowFilling" style="height:35%"></div>
+                </div>
+                <div class="tub">
+                    <div class="yellowFilling" style="height:46%"></div>
+                </div>
+                <div class="tub">
+                    <div class="redFilling" style="height:100%"></div>
+                </div>
+                <div class="tub">
+                    <div class="redFilling" style="height:100%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:75%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:50%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:54%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:50%"></div>
+                </div>
+                <div class="tub">
+                    <div class="yellowFilling" style="height:40%"></div>
+                </div>
+                <div class="tub">
+                    <div class="yellowFilling" style="height:35%"></div>
+                </div>
+                <div class="tub">
+                    <div class="yellowFilling" style="height:47%"></div>
+                </div>
+                <div class="tub">
+                    <div class="yellowFilling" style="height:20%"></div>
+                </div>
+                <div class="tub">
+                    <div class="redFilling" style="height:100%"></div>
+                </div>
+                <div class="tub">
+                    <div class="redFilling" style="height:100%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:95%"></div>
+                </div>
+                <div class="tub">
+                    <div class="redFilling" style="height:100%"></div>
+                </div>
+                <div class="tub">
+                    <div class="redFilling" style="height:100%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:75%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:75%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:50%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:54%"></div>
+                </div>
+                <div class="tub">
+                    <div class="greenFilling" style="height:50%"></div>
+                </div>
+                <div class="tub">
+                    <div class="yellowFilling" style="height:40%"></div>
+                </div>
+                <div class="tub">
+                    <div class="yellowFilling" style="height:35%"></div>
+                </div> -->
+            </div>
+            <p class="medida" style="bottom: 0%;">0%</p>
+            <p class="medida" style="bottom: 25%;">50%</p>
+            <p class="medida" style="bottom: 50%;">100%</p>
+            <p class="medida" style="bottom: 75%;">150%</p>
+            <p class="medida" style="bottom: 100%;">200%</p>
+        </div>
+        <div class="chartInfo">
+            <p id="from">03/04/2018</p>
+            <p id="to">20/04/2018</p>
+        </div>
     </div>
-    
+    <script type="text/javascript" src="../bundle/graphLogic-bundle.js"></script>
 </body>
 
 </html>
