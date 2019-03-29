@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Nombramientos</title>
 </head>
 
@@ -13,9 +14,9 @@
         <div class="chartInfo">
             <p id="codigoPlaza">Plaza:IFGGR4</p>
             <div>
-                <button class="btn" id="btnDia">Dias</button>
-                <button class="btn" id="btnMes">Meses</button>
-                <button class="btn" id="btnAno">Años</button>
+                <button class="btn" id="btnDia" onclick="cargarGrafico(datos)">Dias</button>
+                <button class="btn" id="btnMes" onclick="cargarGraficoFiltrado(filtrarPorMes())">Meses</button>
+                <button class="btn" id="btnAno" onclick="cargarGraficoFiltrado(filtrarPorAño())">Años</button>
             </div>
         </div>
         <div class="chartContaniner">
@@ -31,7 +32,9 @@
             <p id="to">20/04/2018</p>
         </div>
     </div>
-    <script type="text/javascript" src="../bundle/graphLogic-bundle.js"></script>
+    <!-- <script type="text/javascript" src="../bundle/graphLogic-bundle.js"></script> -->
+    <script type="text/javascript" src="../javascript/datos.js"></script>
+    <script type="text/javascript" src="../javascript/main.js"></script>
 </body>
 
 </html>
