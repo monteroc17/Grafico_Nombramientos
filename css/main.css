@@ -1,3 +1,7 @@
+.body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .chartContext {
     height: 100vh;
     width: 70vw;
@@ -10,12 +14,33 @@
 
 .chartInfo {
     width: 100%;
-    background-color: rgba(105, 105, 105, .8);
-    font-weight: bold;
+    background-color: rgba(175, 175, 175, 0.8);
+    font-weight: 800;
     height: 50px;
     display: flex;
     padding: 2px;
     justify-content: space-between;
+}
+
+p#codigoPlaza{
+    font-size: 22.5px;
+    -webkit-text-stroke: 0.75px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 3px 2px rgb(46, 46, 46);
+}
+
+p#from{
+    font-size: 22.5px;
+    -webkit-text-stroke: 0.75px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 3px 2px rgb(46, 46, 46);
+}
+
+p#to{
+    font-size: 22.5px;
+    -webkit-text-stroke: 0.75px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 3px 2px rgb(46, 46, 46);
 }
 
 .chartContaniner{
@@ -31,11 +56,12 @@ div#chartDiv {
     height: 100%;
     width: 92%;
     border: 1px solid#ccc;
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     padding: 1px;
     display: flex;
     user-select: none;
     cursor: pointer;
+    position: relative;
     overflow-x: auto;
     overflow-y: hidden;
     -ms-overflow-style: none;
@@ -50,35 +76,75 @@ div#chartDiv::-webkit-scrollbar { display: none }
     display: flex;
     flex-direction: column-reverse;
     margin: 0px 6px 0px 0px;
+    
+    /* Atributo necesario para que actualice la posición del tooltip al hacer scroll*/
+    position: relative;
 }
 
-.yellowFilling {
-    background-color: rgba(204, 204, 0, .8);
+.tub * .tooltipInfo{
+    cursor: help;
+    visibility: hidden;
+    
+    background-color: rgba(0, 0, 0, 0.753);
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 24px;
+    
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    left: 50%;
+    margin-left: -60px; /* La mitad de width (120/2 = 60), para centrar el tooltip */
+
+    /* Animación */
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+    /* Flecha del tooltip hacia abajo */
+    .tub * .tooltipInfo::after{
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.753) transparent transparent transparent;
+    }
+    .tub *:hover .tooltipInfo{
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+.yellowFill {
+    background-color: rgb(255, 232, 128);
     border-style: solid;
     border-width: 2px;
-    border-color: rgb(204, 204, 0);
+    border-color: rgb(255, 220, 62);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     animation: filling 2s;
     width: inherit;
 }
 
-.redFilling {
-    background-color: rgba(245, 30, 30, .8);
+.redFill {
+    background-color: rgb(255, 113, 113);
     border-style: solid;
     border-width: 2px;
-    border-color: rgb(245, 30, 30);
+    border-color: rgb(255, 70, 70);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     animation: filling 2s;
     width: inherit;
 }
 
-.greenFilling {
-    background-color: rgba(0, 100, 0, .8);
+.greenFill {
+    background-color: rgb(97, 255, 97);
     border-style: solid;
     border-width: 2px;
-    border-color: rgb(0, 100, 0);
+    border-color: rgb(11, 233, 11);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     animation: filling 2s;
@@ -86,15 +152,21 @@ div#chartDiv::-webkit-scrollbar { display: none }
 }
 
 .btn {
-    background-color: rgb(107, 37, 153);
+    background-color: rgb(71, 129, 255);
     border: 0px solid white;
-    border-radius: 5px;
+    border-radius: 50px;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background-color: rgb(94, 145, 255);
+    transform: scale(1.0375);
 }
 
 .medida{
@@ -105,7 +177,7 @@ div#chartDiv::-webkit-scrollbar { display: none }
     right: 0px;
     margin: 0;
     width: 7%;
-    background-color: red;
+    background-image: linear-gradient(to bottom, #2a2a2a, #3f3f3f, #545454, #6b6b6b, #838383);
     border-bottom-width: 2px;
     border-bottom-color: white;
     border-top-left-radius: 8px;

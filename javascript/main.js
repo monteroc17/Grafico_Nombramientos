@@ -6,21 +6,39 @@ function limpiarGrafico() {
     }
 }
 
+function limpiarIDNombramiento(ID) {
+    let tempID = ID;
+    let remplazo1 = tempID.replace("{", "");
+    let remplazo2 = remplazo1.replace("}", "");
+
+    tempID=remplazo2;
+    return tempID;
+}
+
 /**
  * carga programaticamente el JSON en el html
  * @param {object} datos 
  */
 function cargarGrafico() {
     let container = document.getElementById('chartDiv');
+    
     for (var i = 0; i < datos.length; i++) {
+        
+        var IDNombramiento = limpiarIDNombramiento(datos[i].ridnombramientos);
+        var mensaje = document.createElement('span');
+        mensaje.className = 'tooltipInfo';
+        mensaje.innerText = 'Día:\n' + datos[i].rdia + '\nNombramiento:\n' + IDNombramiento;
+
         var barra = document.createElement('div');
         barra.style.height = Math.floor(parseInt(datos[i].rporcentaje) / 2) + '%';
+        barra.appendChild(mensaje);
+
         if (datos[i].rporcentaje > 100) {
-            barra.className = 'redFilling';
+            barra.className = 'redFill';
         } else if (datos[i].rporcentaje < 100) {
-            barra.className = 'yellowFilling';
+            barra.className = 'yellowFill';
         } else {
-            barra.className = 'greenFilling';
+            barra.className = 'greenFill';
         }
         var tempDiv = document.createElement('div');
         tempDiv.className = 'tub';
@@ -41,20 +59,20 @@ function cargarGraficoPorMeses(lista) {
         var barraMenor = document.createElement('div');
         barraMenor.style.height = Math.floor(parseInt(lista[i].rporcentaje) / 2) + '%';
         if (lista[i].rporcentaje > 100) {
-            barraMenor.className = 'redFilling';
+            barraMenor.className = 'redFill';
         } else if (lista[i].rporcentaje < 100) {
-            barraMenor.className = 'yellowFilling';
+            barraMenor.className = 'yellowFill';
         } else {
-            barraMenor.className = 'greenFilling';
+            barraMenor.className = 'greenFill';
         }
         var barraMayor = document.createElement('div');
         barraMayor.style.height = Math.floor(parseInt(lista[i].rporcentaje) / 2) + '%';
         if (lista[i].rporcentaje > 100) {
-            barraMayor.className = 'redFilling';
+            barraMayor.className = 'redFill';
         } else if (lista[i].rporcentaje < 100) {
-            barraMayor.className = 'yellowFilling';
+            barraMayor.className = 'yellowFill';
         } else {
-            barraMayor.className = 'greenFilling';
+            barraMayor.className = 'greenFill';
         }
         var tempDiv = document.createElement('div');
         tempDiv.className = 'tub';
