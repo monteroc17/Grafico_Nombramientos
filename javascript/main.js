@@ -24,10 +24,12 @@ function cargarGrafico() {
     
     for (var i = 0; i < datos.length; i++) {
         
+        /* Se obtiene información a mostrar en el popUpInformativo */
         var IDNombramiento = limpiarIDNombramiento(datos[i].ridnombramientos);
         var mensaje = document.createElement('span');
-        mensaje.className = 'tooltipInfo';
-        mensaje.innerText = 'Día: ' + datos[i].rdia + '\nNombramiento: ' + IDNombramiento;
+        mensaje.className = 'popUpInformativo';
+        mensaje.innerText = 'Nombramiento: ' +
+        IDNombramiento + '\nFecha: ' + datos[i].rdia + '\nUso: ' + datos[i].rporcentaje + '%';
 
         var barra = document.createElement('div');
         barra.style.height = Math.floor(parseInt(datos[i].rporcentaje) / 2) + '%';
