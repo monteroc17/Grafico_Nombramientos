@@ -27,7 +27,7 @@ function cargarGrafico() {
         var IDNombramiento = limpiarIDNombramiento(datos[i].ridnombramientos);
         var mensaje = document.createElement('span');
         mensaje.className = 'tooltipInfo';
-        mensaje.innerText = 'Día:\n' + datos[i].rdia + '\nNombramiento:\n' + IDNombramiento;
+        mensaje.innerText = 'Día: ' + datos[i].rdia + '\nNombramiento: ' + IDNombramiento;
 
         var barra = document.createElement('div');
         barra.style.height = Math.floor(parseInt(datos[i].rporcentaje) / 2) + '%';
