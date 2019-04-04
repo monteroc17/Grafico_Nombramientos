@@ -244,33 +244,45 @@ function obtenerMayor(lista) {
     return elementoMax;
 }
 
-function scroll()
-{
+function scroll() {
     const slider = document.getElementById('chartDiv');
     let isDown = false;
     let startX;
     let scrollLeft;
 
     slider.addEventListener('mousedown', (e) => {
-      isDown = true;
-      slider.classList.add('active');
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
     });
     slider.addEventListener('mouseleave', () => {
-      isDown = false;
-      slider.classList.remove('active');
+        isDown = false;
+        slider.classList.remove('active');
     });
     slider.addEventListener('mouseup', () => {
-      isDown = false;
-      slider.classList.remove('active');
+        isDown = false;
+        slider.classList.remove('active');
     });
     slider.addEventListener('mousemove', (e) => {
-      if(!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 2;
-      slider.scrollLeft = scrollLeft - walk;
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.scrollLeft = scrollLeft - walk;
+    });
+}
+
+function slider() {
+    let slider = document.querySelector('[type=range]');
+    let barras = document.getElementsByClassName('tub');
+
+    console.log(barras[0])
+    slider.addEventListener('input', e => {
+        for (var i = 0; i < barras.length; i++) {
+            console.log(barras[i].firstChild.style)
+            barras[i].style.width = e.target.value + 'px';
+        }
     });
 }
 
@@ -285,6 +297,7 @@ let buttonAno = document.getElementById('btnAno');
 
 cargarGraficoPorDias(datos);
 scroll();
+slider();
 
 
 
