@@ -1,3 +1,7 @@
+.body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 .chartContext {
     height: 100vh;
     width: 70vw;
@@ -10,12 +14,27 @@
 
 .chartInfo {
     width: 100%;
-    background-color: rgba(105, 105, 105, .8);
-    font-weight: bold;
+    background-color: #f3f3f3;
+    font-weight: 800;
     height: 50px;
     display: flex;
     padding: 2px;
     justify-content: space-between;
+}
+
+p#codigoPlaza{
+    font-size: 25px;
+    -webkit-text-fill-color: #2a2a2a;
+}
+
+p#from{
+    font-size: 20px;
+    -webkit-text-fill-color: #2a2a2a;
+}
+
+p#to{
+    font-size: 20px;
+    -webkit-text-fill-color: #2a2a2a;
 }
 
 .chartContaniner{
@@ -31,11 +50,12 @@ div#chartDiv {
     height: 100%;
     width: 92%;
     border: 1px solid#ccc;
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     padding: 1px;
     display: flex;
     user-select: none;
     cursor: pointer;
+    position: relative;
     overflow-x: auto;
     overflow-y: hidden;
     -ms-overflow-style: none;
@@ -50,52 +70,124 @@ div#chartDiv::-webkit-scrollbar { display: none }
     display: flex;
     flex-direction: column-reverse;
     margin: 0px 6px 0px 0px;
+    
+    /* Atributo necesario para que actualice la posición del popUpInformativo al hacer scrolling*/
+    position: relative;
 }
 
-.yellowFilling {
-    background-color: rgba(204, 204, 0, .8);
+.tub * .popUpInformativo{
+    cursor: help;
+    visibility: hidden;
+    
+    background-color: rgba(0, 0, 0, 0.753); /*Con opacidad reducida */
+    border-radius: 24px;
+
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    padding: 5px;
+    
+    
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px; /* La mitad de width (200/2 = 100), para centrar el popUpInformativo */
+
+    /* Animación */
+    opacity: 0;
+    transition: opacity 0.75s;
+}
+    /* Flecha del popUpInformativo hacia abajo */
+    .tub * .popUpInformativo::after{
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.753) transparent transparent transparent;
+    }
+    .tub *:hover .popUpInformativo{
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+.yellowFill {
+    background-image: linear-gradient(to top, #ffdb3a, #ffde4e, #ffe260, #ffe570, #ffe880);
     border-style: solid;
     border-width: 2px;
-    border-color: rgb(204, 204, 0);
+    border-color: rgb(255, 220, 62);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     animation: filling 2s;
     width: inherit;
 }
 
-.redFilling {
-    background-color: rgba(245, 30, 30, .8);
+    .yellowFill:hover{
+        background-image: linear-gradient(to top, #ffe880, #ffe880, #ffe880, #ffe880, #ffe880);
+    }
+
+.redFill {
+    background-image: linear-gradient(to top, #ff4545, #ff5756, #ff6766, #ff7776, #ff8585);
     border-style: solid;
     border-width: 2px;
-    border-color: rgb(245, 30, 30);
+    border-color: rgb(255, 70, 70);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     animation: filling 2s;
     width: inherit;
 }
 
-.greenFilling {
-    background-color: rgba(0, 100, 0, .8);
+    .redFill:hover{
+        background-image: linear-gradient(to top, #ff8585, #ff8585, #ff8585, #ff8585, #ff8585);
+    }
+
+.greenFill {
+    background-image: linear-gradient(to top, #2ddc2d, #3ce53c, #4aed49, #56f655, #61ff61);
     border-style: solid;
     border-width: 2px;
-    border-color: rgb(0, 100, 0);
+    border-color: rgb(11, 233, 11);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     animation: filling 2s;
     width: inherit;
 }
+
+    .greenFill:hover{
+        background-image: linear-gradient(to top, #61ff61, #61ff61, #61ff61, #61ff61, #61ff61);
+    }
 
 .btn {
-    background-color: rgb(107, 37, 153);
-    border: 0px solid white;
-    border-radius: 5px;
-    color: white;
-    padding: 15px 32px;
+    background-color: #7393FF;
+    border: 0px solid #7393FF;
+    border-radius: 18px;
+    outline: none;
+
+    display: inline-block;
+    cursor: pointer;
+    
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    padding: 15px 30px;
+    color: white;
     font-size: 16px;
+    font-weight: bold;
+
+    box-shadow: 0 5px rgb(128, 128, 128);
 }
+
+    .btn:hover{
+        background-color: #809DFF;
+    }
+
+    .btn:active{
+        background-color: #5079FF;
+        box-shadow: 0 2.5px rgb(87, 87, 87);
+        transform: translateY(4px);
+    }
 
 .medida{
     position: absolute;
@@ -105,7 +197,7 @@ div#chartDiv::-webkit-scrollbar { display: none }
     right: 0px;
     margin: 0;
     width: 7%;
-    background-color: red;
+    background-image: linear-gradient(to bottom, #2a2a2a, #3f3f3f, #545454, #6b6b6b, #838383);
     border-bottom-width: 2px;
     border-bottom-color: white;
     border-top-left-radius: 8px;
