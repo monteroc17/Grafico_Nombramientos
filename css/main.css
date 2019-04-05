@@ -1,4 +1,4 @@
-.body{
+.body {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -22,28 +22,33 @@
     justify-content: space-between;
 }
 
-p#codigoPlaza{
+p#codigoPlaza {
     font-size: 25px;
     -webkit-text-fill-color: #2a2a2a;
 }
 
-p#from{
+p#from {
     font-size: 20px;
     -webkit-text-fill-color: #2a2a2a;
 }
 
-p#to{
+p#to {
     font-size: 20px;
     -webkit-text-fill-color: #2a2a2a;
 }
 
-.chartContaniner{
+.chartContainer {
     width: 100%;
     height: 80%;
     padding: 1px;
     margin-bottom: 5px;
     margin-top: 15px;
     position: relative;
+}
+
+div#chartDiv:active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
 }
 
 div#chartDiv {
@@ -59,10 +64,13 @@ div#chartDiv {
     overflow-x: auto;
     overflow-y: hidden;
     -ms-overflow-style: none;
-    scrollbar-width: none; /* Firefox 64 */
+    scrollbar-width: none;
+    /* Firefox 64 */
 }
 
-div#chartDiv::-webkit-scrollbar { display: none }
+div#chartDiv::-webkit-scrollbar {
+    display: none
+}
 
 .tub {
     width: 25px;
@@ -70,50 +78,48 @@ div#chartDiv::-webkit-scrollbar { display: none }
     display: flex;
     flex-direction: column-reverse;
     margin: 0px 6px 0px 0px;
-    
     /* Atributo necesario para que actualice la posición del popUpInformativo al hacer scrolling*/
     position: relative;
 }
 
-.tub * .popUpInformativo{
+.tub * .popUpInformativo {
     cursor: help;
     visibility: hidden;
-    
-    background-color: rgba(0, 0, 0, 0.753); /*Con opacidad reducida */
+    background-color: rgba(0, 0, 0, 0.753);
+    /*Con opacidad reducida */
     border-radius: 24px;
-
     text-align: center;
     color: #fff;
     font-size: 13px;
     padding: 5px;
-    
-    
     position: absolute;
     z-index: 1;
     width: 200px;
     left: 50%;
-    margin-left: -100px; /* La mitad de width (200/2 = 100), para centrar el popUpInformativo */
-
+    margin-left: -100px;
+    /* La mitad de width (200/2 = 100), para centrar el popUpInformativo */
     /* Animación */
     opacity: 0;
     transition: opacity 0.75s;
 }
-    /* Flecha del popUpInformativo hacia abajo */
-    .tub * .popUpInformativo::after{
-        content: " ";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.753) transparent transparent transparent;
-    }
-    .tub *:hover .popUpInformativo{
-        visibility: visible;
-        opacity: 1;
-    }
 
+/* Flecha del popUpInformativo hacia abajo */
+
+.tub * .popUpInformativo::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.753) transparent transparent transparent;
+}
+
+.tub *:hover .popUpInformativo {
+    visibility: visible;
+    opacity: 1;
+}
 
 .yellowFill {
     background-image: linear-gradient(to top, #ffdb3a, #ffde4e, #ffe260, #ffe570, #ffe880);
@@ -126,9 +132,9 @@ div#chartDiv::-webkit-scrollbar { display: none }
     width: inherit;
 }
 
-    .yellowFill:hover{
-        background-image: linear-gradient(to top, #ffe880, #ffe880, #ffe880, #ffe880, #ffe880);
-    }
+.yellowFill:hover {
+    background-image: linear-gradient(to top, #ffe880, #ffe880, #ffe880, #ffe880, #ffe880);
+}
 
 .redFill {
     background-image: linear-gradient(to top, #ff4545, #ff5756, #ff6766, #ff7776, #ff8585);
@@ -141,9 +147,9 @@ div#chartDiv::-webkit-scrollbar { display: none }
     width: inherit;
 }
 
-    .redFill:hover{
-        background-image: linear-gradient(to top, #ff8585, #ff8585, #ff8585, #ff8585, #ff8585);
-    }
+.redFill:hover {
+    background-image: linear-gradient(to top, #ff8585, #ff8585, #ff8585, #ff8585, #ff8585);
+}
 
 .greenFill {
     background-image: linear-gradient(to top, #2ddc2d, #3ce53c, #4aed49, #56f655, #61ff61);
@@ -156,40 +162,37 @@ div#chartDiv::-webkit-scrollbar { display: none }
     width: inherit;
 }
 
-    .greenFill:hover{
-        background-image: linear-gradient(to top, #61ff61, #61ff61, #61ff61, #61ff61, #61ff61);
-    }
+.greenFill:hover {
+    background-image: linear-gradient(to top, #61ff61, #61ff61, #61ff61, #61ff61, #61ff61);
+}
 
 .btn {
     background-color: #7393FF;
     border: 0px solid #7393FF;
     border-radius: 18px;
     outline: none;
-
     display: inline-block;
     cursor: pointer;
-    
     text-align: center;
     text-decoration: none;
     padding: 15px 30px;
     color: white;
     font-size: 16px;
     font-weight: bold;
-
     box-shadow: 0 5px rgb(128, 128, 128);
 }
 
-    .btn:hover{
-        background-color: #809DFF;
-    }
+.btn:hover {
+    background-color: #809DFF;
+}
 
-    .btn:active{
-        background-color: #5079FF;
-        box-shadow: 0 2.5px rgb(87, 87, 87);
-        transform: translateY(4px);
-    }
+.btn:active {
+    background-color: #5079FF;
+    box-shadow: 0 2.5px rgb(87, 87, 87);
+    transform: translateY(4px);
+}
 
-.medida{
+.medida {
     position: absolute;
     text-align: center;
     color: white;
@@ -204,6 +207,8 @@ div#chartDiv::-webkit-scrollbar { display: none }
     border-bottom-right-radius: 8px;
 }
 
-@keyframes filling{
-    from {height: 100%}
+@keyframes filling {
+    from {
+        height: 100%
+    }
 }
