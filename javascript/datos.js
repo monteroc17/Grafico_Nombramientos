@@ -1,3 +1,7 @@
+/**
+ * Archivo con el JSON.
+ */
+
 var datos = [
     { "rdia": "2019-01-01", "rporcentaje": "120", "ridnombramientos": "{41433,41434}" },
     { "rdia": "2019-01-02", "rporcentaje": "100", "ridnombramientos": "{41433,41434}" },

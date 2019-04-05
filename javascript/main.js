@@ -1,11 +1,20 @@
+/**
+ * Archivo principal con todas las funciones del módulo.
+ */
 
+/**
+ * Borra el grpafico
+ */
 function limpiarGrafico() {
     var node = document.getElementById('chartDiv');
     while (node.hasChildNodes()) {
         node.removeChild(node.lastChild);
     }
 }
-
+/**
+ * limpia el nombramiento en el popup
+ * @param {int} ID 
+ */
 function limpiarIDNombramiento(ID) {
     let tempID = ID;
     let remplazo1 = tempID.replace("{", "");
@@ -14,7 +23,10 @@ function limpiarIDNombramiento(ID) {
     tempID = remplazo2;
     return tempID;
 }
-
+/**
+ * Genera una barra con popup
+ * @param {object} elemento 
+ */
 function crearBarra(elemento) {
     var IDNombramiento = limpiarIDNombramiento(elemento.ridnombramientos);
     var mensaje = document.createElement('span');
@@ -244,6 +256,9 @@ function obtenerMayor(lista) {
     return elementoMax;
 }
 
+/**
+ * Se encarga de manejar el scroll de las barras
+ */
 function scroll() {
     const slider = document.getElementById('chartDiv');
     let isDown = false;
@@ -273,6 +288,9 @@ function scroll() {
     });
 }
 
+/**
+ * Se encarga de manejar el tamaño de las barras
+ */
 function slider() {
     let slider = document.querySelector('[type=range]');
     let barras = document.getElementsByClassName('tub');
@@ -285,15 +303,6 @@ function slider() {
         }
     });
 }
-
-
-let buttonDia = document.getElementById('btnDia');
-let buttonMes = document.getElementById('btnMes');
-let buttonAno = document.getElementById('btnAno');
-
-// buttonDia.onclick = cargarGrafico(datos);
-// buttonMes.onclick = cargarGrafico(filtrarPorMes());
-// buttonAno.onclick = cargarGrafico(filtrarPorAño());
 
 cargarGraficoPorDias(datos);
 scroll();
