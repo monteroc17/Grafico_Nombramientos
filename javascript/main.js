@@ -28,9 +28,11 @@ function limpiarIDNombramiento(ID) {
  * @param {object} elemento 
  */
 function crearBarra(elemento) {
-    var IDNombramiento = limpiarIDNombramiento(elemento.ridnombramientos);
     var mensaje = document.createElement('span');
     mensaje.className = 'popUpInformativo';
+
+    /* Se asigna la información a mostrar en el popUpInformativo */
+    var IDNombramiento = limpiarIDNombramiento(elemento.ridnombramientos);
     mensaje.innerText = 'Nombramiento: ' +
         IDNombramiento + '\nFecha: ' + elemento.rdia + '\nUso: ' + elemento.rporcentaje + '%';
 
@@ -50,7 +52,6 @@ function cargarGraficoPorDias() {
 
     for (var i = 0; i < datos.length; i++) {
 
-        /* Se obtiene información a mostrar en el popUpInformativo */
         var barra = this.crearBarra(datos[i]);
 
         if (datos[i].rporcentaje > 100) {
